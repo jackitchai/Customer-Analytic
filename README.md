@@ -1,1 +1,1 @@
-# Customer-segmentation-in-ecommmerce
+# Customer-analytic-in-ecommmerce
