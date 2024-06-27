@@ -22,9 +22,9 @@ x-airflow-common:
 services:
   postgres:
     image: postgres
-    build : 
-      context: .
-      dockerfile : postgres.Dockerfile
+    # build : 
+    #   context: .
+    #   dockerfile : postgres.Dockerfile
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
@@ -46,9 +46,9 @@ services:
     command: webserver
     ports:
       - "8080:8080"
-    build :
-      context : .
-      dockerfile:  airflow.Dockerfile
+    # build :
+    #   context : .
+    #   dockerfile:  airflow.Dockerfile
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s

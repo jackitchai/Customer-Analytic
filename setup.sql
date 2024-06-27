@@ -1,8 +1,8 @@
-CREATE SCHEMA IF NOT EXISTS myschema;
+CREATE SCHEMA IF NOT EXISTS customer_schema;
 
-DROP TABLE IF EXISTS myschema.ecomm_invoice;
+DROP TABLE IF EXISTS customer_schema.customer_table;
 
-CREATE TABLE myschema.ecomm_invoice (
+CREATE TABLE customer_schema.customer_table (
     InvoiceNo TEXT,
     StockCode TEXT,
     "Description" TEXT,
@@ -13,5 +13,5 @@ CREATE TABLE myschema.ecomm_invoice (
     Country TEXT
 );
 
-COPY myschema.ecomm_invoice
-FROM '/data/cleaned_data.csv' DELIMITER ',' CSV HEADER;
+-- COPY customer_schema.customer_table
+-- FROM '/data/cleaned_data.csv' DELIMITER ',' CSV HEADER;
