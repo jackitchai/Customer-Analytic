@@ -66,7 +66,7 @@ def postgres_to_s3():
     logging.info(f"Completed extracting data from postgres database loaded to {object_name}")
 
 with DAG(
-    dag_id = "dag_with_postgres_hooks_v01",
+    dag_id = "dag_postgres_to_s3_v01",
     default_args = default_args
 ) as dag:
     task1 = PythonOperator(
@@ -74,3 +74,5 @@ with DAG(
         python_callable=postgres_to_s3
     )
     task1
+
+#minio_s3_conn
